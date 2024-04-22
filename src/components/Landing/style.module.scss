@@ -6,10 +6,26 @@
 
     img{
         object-fit: cover;
+        // height: 60%; 
     }
     
     .slidercontainer{
         position: absolute;
-        top: 80vh;
+        top: 34vh;
+    }
+
+    .slider{
+        position: relative;
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .slider p{
+        position: relative;
+        color: white;
+        font-size: 13vw;
+        font-weight: 400;
+        margin-right: 3vw;
+        letter-spacing: -0.8vw;
     }
 }
