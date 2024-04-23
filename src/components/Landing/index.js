@@ -7,24 +7,37 @@ import gsap from 'gsap';
 
 function index() {
 
+  // create a reference to the text elements
   const firstText = useRef(null);
   const secondText = useRef(null);
+
+  // set the initial position of the text
   let xPosition = 0;
+
+  // set the direction of the text towards the left
   let direction = -1;
 
   useEffect(() => {
+    // start the animation when the component is mounted
     requestAnimationFrame(animate);
   });
 
+  // animation for the text slider
   const animate = () => {
     
+    // check if the text is out of the screen
     if(xPosition <= -100){
       xPosition = 0
     }
-     
+    
+    // set the position of the text on the x-axis
     gsap.set(firstText.current, {xPercent: xPosition});
     gsap.set(secondText.current, {xPercent: xPosition});
-    xPosition += 0.1 * direction;
+
+    // update the position of the text on the x-axis towards the left
+    xPosition += 0.06 * direction;
+
+    // call and update the animation again for the next repaint
     requestAnimationFrame(animate);
   }
 
