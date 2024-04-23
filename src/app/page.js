@@ -9,7 +9,6 @@ function page() {
   return (
     <main>
         <Landing />
-        <Projects />
     </main>
   )
 }
