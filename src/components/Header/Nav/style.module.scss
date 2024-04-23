@@ -1,0 +1,37 @@
+.menu{
+    height: 100vh;
+    width: 35vw;
+    background-color: #1C1D20;
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+    z-index: 1;
+
+    .body{
+        padding: 80px;
+
+        .nav{
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            
+            .header{
+                color: rgb(153, 153, 153);
+                border-bottom: 1px solid rgb(153, 153, 153);
+                text-transform: uppercase;
+                font-size: 0.9vw;
+                font-weight: 700;
+                margin-bottom: 34px;
+                letter-spacing: -1px;
+            }
+
+            a{
+                font-size: 3.5vw;
+                text-decoration: none;
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
+}

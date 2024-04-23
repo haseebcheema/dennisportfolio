@@ -29,12 +29,13 @@ function index() {
       <div className={styles.body}>
         <div className={styles.nav}>
             <div className={styles.header}>
-                <p>Navigation</p>
-                {/* iterating navItems and passing the data in th form of props to the Link component */}
-                {navItems.map((item, index) => {
-                    return <Link data={{index, ...item}}></Link>
-                })}
+                <h5>Navigation</h5>
             </div>
+            {/* iterating navItems and passing the data in th form of props to the Link component */}
+            {navItems.map((data, index) => {
+                return <Link className={styles.a} key={index} data={{index, ...data}}/>
+                })
+            }
         </div>
       </div>
     </div>
