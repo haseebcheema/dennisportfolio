@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './style.module.scss';
 import { title } from 'process';
+import Link from 'next/link';
 
 function index() {
 
@@ -25,8 +26,18 @@ function index() {
     ]
 
   return (
-    <div>
-      
+    <div className={styles.menu}>
+      <div className={styles.body}>
+        <div className={styles.nav}>
+            <div className={styles.header}>
+                <p>Navigation</p>
+                {/* iterating navItems and passing the data in th form of props to the Link component */}
+                {navItems.map((item, index) => {
+                    return <Link data={{index, ...item}}></Link>
+                })}
+            </div>
+        </div>
+      </div>
     </div>
   )
 }
