@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './style.module.scss';
-import { title } from 'process';
-import Link from 'next/link';
+import Link from './Link';
 
 function index() {
 
