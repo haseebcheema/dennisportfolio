@@ -6,7 +6,6 @@
 
     img{
         object-fit: cover;
-        // height: 60%; 
     }
     
     .slidercontainer{
@@ -27,5 +26,25 @@
         font-weight: 400;
         padding-right: 3vw;
         letter-spacing: -0.8vw;
+    }
+
+    .description{
+        position: absolute;
+        top: 32vh;
+        left: 71vw;
+
+        p{
+            margin: 0px;
+            margin-bottom: 0.6vw;
+            letter-spacing: -0.1vw;
+            font-size: 2.2vw;
+            color: white;
+        }
+
+        svg{
+            transform: scale(2.2);
+            margin-bottom: 5vw;
+            padding-left: 3px;
+        }
     }
 }
