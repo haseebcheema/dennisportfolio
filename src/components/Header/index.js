@@ -9,10 +9,10 @@ function index() {
     // state to track if the menu is active or not
     const [isActive, setIsActive] = useState(false);
 
-    // get the current pathname
+    // get the current url or pathname
     const pathname = usePathname();
 
-    // close the menu if the pathname changes
+    // close the menu whenever the pathname changes
     useEffect(() => {
         if(isActive) setIsActive(false);
     }, [pathname])
