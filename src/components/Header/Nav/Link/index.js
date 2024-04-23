@@ -7,6 +7,8 @@ function index({ data }) {
     <div className={styles.link}>
       <div className={styles.indicator}>
       </div>
+
+      {/* accessing the data passed in the form of props */}
       <Link href={data.href}>
           {data.title}
       </Link>

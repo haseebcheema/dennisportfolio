@@ -29,8 +29,7 @@ function index() {
       </div>
 
       {/* if the menu is active, show the Nav component */}
-      {/* {isActive && <Nav />} */}
-      <Nav/>
+      {isActive && <Nav />}
     </>
   )
 }
