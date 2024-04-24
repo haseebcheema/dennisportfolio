@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import Nav from './Nav'
+import {AnimatePresence } from 'framer-motion';
 
 function index() {
 
@@ -28,8 +29,10 @@ function index() {
         </div>
       </div>
 
-      {/* if the menu is active, show the Nav component */}
-      {isActive && <Nav />}
+      {/* if the menu is active, show the Nav component */}  
+      <AnimatePresence mode='wait'>
+        {isActive && <Nav />}
+      </AnimatePresence>
     </>
   )
 }

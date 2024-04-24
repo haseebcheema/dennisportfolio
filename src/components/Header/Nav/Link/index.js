@@ -1,14 +1,18 @@
+'use client';
+
 import React from 'react';
 import styles from './style.module.scss';
 import Link from 'next/link';
+import { slide, scale } from '../../anim';
+import { motion } from 'framer-motion';
 
 function index({ data, isActive, setSelectedIndicator }) {
 
   // destructuring the data passed in the form of props
-  const {title, href} = data;
+  const {index, title, href} = data;
 
   return (
-    <div onMouseEnter={() => setSelectedIndicator(href)} className={styles.links}>
+    <motion.div onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit" className={styles.links}>
       <div className={styles.indicator}>
       </div>
 
@@ -16,7 +20,7 @@ function index({ data, isActive, setSelectedIndicator }) {
       <Link href={href}>
           {title}
       </Link>
-    </div>
+    </motion.div>
   )
 }
 

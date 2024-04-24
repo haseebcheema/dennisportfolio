@@ -1,7 +1,11 @@
+'use client';
+
 import React, { useState } from 'react';
 import styles from './style.module.scss';
 import Link from './Link';
 import { usePathname } from 'next/navigation';
+import { menuSlide } from '../anim';
+import { motion } from 'framer-motion';
 
 function index() {
 
@@ -32,7 +36,7 @@ function index() {
     ]
 
   return (
-    <div className={styles.menu}>
+    <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={styles.menu}>
       <div className={styles.body}>
         <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
             <div className={styles.header}>
@@ -56,7 +60,7 @@ function index() {
             </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
