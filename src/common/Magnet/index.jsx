@@ -11,8 +11,8 @@ function index({children}) {
     
     useEffect(() => {
         
-        const xTo = gsap.quickTo(magnet.current, "x", {duration: 1, ease: "elastic.out(1, 0.3)"});
-        const yTo = gsap.quickTo(magnet.current, "y", {duration: 1, ease: "elastic.out(1, 0.3)"});
+        const xTo = gsap.quickTo(magnet.current, "x", {duration: 1.5, ease: "elastic.out(1, 0.3)"});
+        const yTo = gsap.quickTo(magnet.current, "y", {duration: 1.5, ease: "elastic.out(1, 0.3)"});
         
         magnet.current.addEventListener('mousemove', (e) => {
             const {clientX, clientY} = e;
@@ -20,8 +20,8 @@ function index({children}) {
             const x = clientX - (left + width / 2);
             const y = clientY - (top + height / 2);
 
-            xTo(x * 0.35);
-            yTo(y * 0.35);
+            xTo(x * 0.5);
+            yTo(y * 0.5);
         })
 
         magnet.current.addEventListener('mouseleave', (e) => {
