@@ -24,14 +24,15 @@
                 opacity: 0.8;
                 border-bottom: 1px solid rgb(153, 153, 153, 0.8);
                 text-transform: uppercase;
-                font-size: 1vw;
-                font-weight: 700;
+                font-size: 13px;
+                font-weight: 900;
+                margin-top: 10px;
                 margin-bottom: 34px;
                 letter-spacing: -1px;
             }
 
             a{
-                font-size: 3.35vw;
+                font-size: 3.36vw;
                 text-decoration: none;
                 color: white;
                 font-weight: 500;
@@ -47,17 +48,17 @@
                 color: rgb(153, 153, 153);
                 opacity: 0.8;
                 text-transform: uppercase;
-                font-size: 1vw;
-                font-weight: 700;
+                font-size: 13px;
+                font-weight: 900;
                 letter-spacing: -1px;
             }
 
             .links{
                 display: flex;
                 gap: 30px;
-                font-size: 1vw;
+                font-size: 0.9vw;
                 font-weight: 500;
-                letter-spacing: -1px;
+                letter-spacing: 0px;
                 cursor: pointer;
 
                 a{
