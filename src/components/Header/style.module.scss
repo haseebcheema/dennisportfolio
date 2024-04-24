@@ -1,3 +1,109 @@
+.header{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px 35px 0px 35px;
+    font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    
+    .logo{
+        display: flex;
+        cursor: pointer;
+
+        p{
+            transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .name{
+            display: flex;
+            position: relative;
+            width: 115px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 5px;
+            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+            
+            p{
+                position: relative;
+                transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+                
+                &:nth-of-type(2){
+                    padding-left: 0.3em;
+                }
+                
+                &:nth-of-type(3){
+                    padding-left: 0.3em;
+                }
+            }
+        }
+
+        &:hover{
+
+            .copyright{
+                transform: rotate(360deg);
+            }
+
+            .name{
+                padding-right: 25px;
+                
+                .codeBy{
+                    transform: translateX(-105%);
+                }
+
+                .dennis{
+                    transform: translateX(-62px);
+                }
+
+                .snellenberg{
+                    transform: translateX(-62px);
+                }
+            }
+        }
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+
+        .elems{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 20px;
+            cursor: pointer;
+            
+            &:hover{
+                .indicator{
+                    transform: scale(1);
+                }
+            }
+
+            .indicator{
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: white;
+                transform: scale(0) translateX(-50%);
+                transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+            }
+        }
+
+        a{
+            cursor: pointer;
+        }
+    } 
+}
+
 .headerButtonContainer{
     position: fixed;
     right: 0;
