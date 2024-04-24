@@ -4,6 +4,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import Nav from './Nav'
+import Magnet from '../../common/Magnet';
 import {AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -41,27 +42,35 @@ function index() {
   return (
     <>
       <div className={styles.header}>
-        <div className={styles.logo}>
-          <p className={styles.copyright}>©</p>
-          <div className={styles.name}>
-              <p className={styles.codeBy}>Code by</p>
-              <p className={styles.dennis}>Dennis</p>
-              <p className={styles.snellenberg}>Snellenberg</p>
+        <Magnet>
+          <div className={styles.logo}>
+            <p className={styles.copyright}>©</p>
+            <div className={styles.name}>
+                <p className={styles.codeBy}>Code by</p>
+                <p className={styles.dennis}>Dennis</p>
+                <p className={styles.snellenberg}>Snellenberg</p>
+            </div>
           </div>
-        </div>
+        </Magnet>
         <div className={styles.nav}>
-          <div className={styles.elems}>
-              <a>Work</a>
-              <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.elems}>
-              <a>About</a>
-              <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.elems}>
-              <a>Contact</a>
-              <div className={styles.indicator}></div>
-          </div>
+          <Magnet>
+            <div className={styles.elems}>
+                <a>Work</a>
+                <div className={styles.indicator}></div>
+            </div>
+          </Magnet>
+          <Magnet>
+            <div className={styles.elems}>
+                <a>About</a>
+                <div className={styles.indicator}></div>
+            </div>
+          </Magnet>
+          <Magnet>
+            <div className={styles.elems}>
+                <a>Contact</a>
+                <div className={styles.indicator}></div>
+            </div>
+          </Magnet>
       </div>
       </div>
       {/* show the Burger Menu */}
