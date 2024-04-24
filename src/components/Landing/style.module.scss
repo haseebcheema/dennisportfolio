@@ -1,11 +1,13 @@
 .landing{
     width: 100%;
-    height: 100vh;
+    height: 115vh;
     position: relative;
     overflow: hidden;
+    background-color: #999D9E;
 
     img{
-        object-fit: cover;
+        object-fit: contain;
+        scale: 1.2;
     }
     
     .slidercontainer{
