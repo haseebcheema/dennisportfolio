@@ -33,8 +33,8 @@ function index() {
               trigger: document.documentElement,
               start: 0,
               end: window.innerHeight,
-              onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
-              onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"})}
+              onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.3, ease: "power1.out"})},
+              onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.3, ease: "power1.out"})}
           }
       });
   }, []);
