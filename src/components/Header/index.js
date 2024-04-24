@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import Nav from './Nav'
 import {AnimatePresence } from 'framer-motion';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 function index() {
 
@@ -14,10 +16,27 @@ function index() {
     // get the current url or pathname
     const pathname = usePathname();
 
+    // create a reference to the button element
+    const button = useRef(null);
+
     // close the menu whenever the pathname changes
     useEffect(() => {
         if(isActive) setIsActive(false);
-    }, [pathname])
+    }, [pathname]);
+
+    // register the ScrollTrigger plugin and animate the button element
+    useLayoutEffect( () => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(button.current, {
+          scrollTrigger: {
+              trigger: document.documentElement,
+              start: 0,
+              end: window.innerHeight,
+              onLeave: () => {gsap.to(button.current, {scale: 1, duration: 0.25, ease: "power1.out"})},
+              onEnterBack: () => {gsap.to(button.current, {scale: 0, duration: 0.25, ease: "power1.out"})}
+          }
+      });
+  }, []);
 
   return (
     <>
@@ -46,7 +65,7 @@ function index() {
       </div>
       </div>
       {/* show the Burger Menu */}
-      <div className={styles.headerButtonContainer}>
+      <div ref={button} className={styles.headerButtonContainer}>
         <div onClick={() => {setIsActive(!isActive)}} className={styles.button}>
           <div className={`${styles.burger} ${isActive? styles.activeBurger : ""}`}>
           </div>

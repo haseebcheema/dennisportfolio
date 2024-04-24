@@ -3,8 +3,8 @@ import styles from './style.module.scss';
 
 function index() {
   return (
-    <div>
-      
+    <div className={styles.projects}>
+      Projects
     </div>
   )
 }
