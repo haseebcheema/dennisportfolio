@@ -74,14 +74,14 @@ function index() {
       </div>
       </div>
       {/* show the Burger Menu */}
-        <div ref={button} className={styles.headerButtonContainer}>
-      <Magnet>
+      <div ref={button} className={styles.headerButtonContainer}>
+        <Magnet>
           <div onClick={() => {setIsActive(!isActive)}} className={styles.button}>
             <div className={`${styles.burger} ${isActive? styles.activeBurger : ""}`}>
             </div>
           </div>
-      </Magnet>
-        </div>
+        </Magnet>
+      </div>
 
       {/* if the menu is active, show the Nav component */}  
       <AnimatePresence mode='wait'>
