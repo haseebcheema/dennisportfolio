@@ -13,6 +13,7 @@
         flex-direction: column;
         gap: 90px;
         padding: 80px;
+        padding-left: 90px;
 
         .nav{
             display: flex;
@@ -24,9 +25,10 @@
                 opacity: 0.8;
                 border-bottom: 1px solid rgb(153, 153, 153, 0.8);
                 text-transform: uppercase;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 900;
                 margin-top: 10px;
+                width: 95%;
                 margin-bottom: 34px;
                 letter-spacing: -1px;
             }
@@ -48,7 +50,7 @@
                 color: rgb(153, 153, 153);
                 opacity: 0.8;
                 text-transform: uppercase;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 900;
                 letter-spacing: -1px;
             }
@@ -56,7 +58,7 @@
             .links{
                 display: flex;
                 gap: 30px;
-                font-size: 0.9vw;
+                font-size: 1vw;
                 font-weight: 500;
                 letter-spacing: -1px;
                 cursor: pointer;
