@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { slide, scale } from '../../anim';
 import { motion } from 'framer-motion';
 import Curve from '../Curve'
+import Magnet from '../../../../common/Magnet';
 
 function index({ data, isActive, setSelectedIndicator }) {
 
@@ -14,15 +15,17 @@ function index({ data, isActive, setSelectedIndicator }) {
 
   return (
     <>
-      <motion.div onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit" className={styles.links}>
-        <motion.div variants={scale} animate={isActive ? "open" : "closed"} className={styles.indicator}>
-        </motion.div>
+      <Magnet>
+        <motion.div onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit" className={styles.links}>
+          <motion.div variants={scale} animate={isActive ? "open" : "closed"} className={styles.indicator}>
+          </motion.div>
 
-        {/* accessing the data passed in the form of props */}
-        <Link href={href}>
-            {title}
-        </Link>
-      </motion.div>
+          {/* accessing the data passed in the form of props */}
+            <Link href={href}>
+                {title}
+            </Link>
+        </motion.div>
+      </Magnet>
       <Curve />
     </>
   )

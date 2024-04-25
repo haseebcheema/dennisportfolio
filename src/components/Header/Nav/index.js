@@ -6,6 +6,7 @@ import Link from './Link';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../anim';
 import { motion } from 'framer-motion';
+import Magnet from '../../../common/Magnet';
 
 function index() {
 
@@ -53,10 +54,18 @@ function index() {
                 <h5>Socials</h5>
             </div>
             <div className={styles.links}>
-                <a href='https://www.awwwards.com/dennissnellenberg/' target='_blank'>Awwwards</a>
-                <a href='https://www.instagram.com/codebydennis/' target='_blank'>Instagram</a>
-                <a href='https://twitter.com/codebydennis' target='_blank'>Twitter</a>
-                <a href='https://www.linkedin.com/in/dennissnellenberg/' target='_blank'>LinkedIn</a>
+                <Magnet>
+                    <a href='https://www.awwwards.com/dennissnellenberg/' target='_blank'>Awwwards</a>
+                </Magnet>
+                <Magnet>
+                    <a href='https://www.instagram.com/codebydennis/' target='_blank'>Instagram</a>
+                </Magnet>
+                <Magnet>
+                    <a href='https://twitter.com/codebydennis' target='_blank'>Twitter</a>
+                </Magnet>
+                <Magnet>
+                    <a href='https://www.linkedin.com/in/dennissnellenberg/' target='_blank'>LinkedIn</a>
+                </Magnet>
             </div>
         </div>
       </div>
