@@ -15,17 +15,17 @@ function index({ data, isActive, setSelectedIndicator }) {
 
   return (
     <>
-      <Magnet>
-        <motion.div onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit" className={styles.links}>
-          <motion.div variants={scale} animate={isActive ? "open" : "closed"} className={styles.indicator}>
-          </motion.div>
-
-          {/* accessing the data passed in the form of props */}
-            <Link href={href}>
-                {title}
-            </Link>
+        <Magnet>
+      <motion.div onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit" className={styles.links}>
+        <motion.div variants={scale} animate={isActive ? "open" : "closed"} className={styles.indicator}>
         </motion.div>
-      </Magnet>
+
+        {/* accessing the data passed in the form of props */}
+              <Link href={href}>
+                  {title}
+              </Link>
+      </motion.div>
+        </Magnet>
       <Curve />
     </>
   )

@@ -66,23 +66,22 @@
                     color: white;
                     position: relative;
 
-                    &::after{
+                    &::after {
                         content: '';
                         position: absolute;
-                        left: 1px;
+                        left: 51%;
                         bottom: -4px;
-                        width: 100%;
+                        width: 0; /* Start with zero width */
                         height: 1px;
-                        transform: scale(0);
-                        transform-origin: center;
-                        transition: transform 0.3s ease-out;   
-                    }
-
-                    &:hover::after{
                         background-color: white;
-                        transform: scale(1);
+                        transform: translateX(-50%); /* Center the underline horizontally */
                         transform-origin: center;
-                    }
+                        transition: width 0.3s ease-out, transform 0.3s ease-out;
+                      }
+                    
+                      &:hover::after {
+                        width: 100%; /* Expand the underline to full width on hover */
+                      }
                 }
             }
         }
