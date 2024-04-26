@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './style.module.scss';
 import Magnet from '../../common/Magnet';
 
-function anim() {
+function index() {
 
     // Text for the description
     const firstPara = 'Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.';
@@ -36,4 +36,4 @@ function anim() {
   )
 }
 
-export default anim;
+export default index;
