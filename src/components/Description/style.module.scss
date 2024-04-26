@@ -1,0 +1,55 @@
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1C1D20;
+
+    .body{
+        width: 80%;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        
+        p{
+            &:nth-child(1){
+                width: 50%;
+                font-size: 2vw;
+                letter-spacing: -1px;
+                line-height: 3vw;
+            }
+    
+            &:nth-child(2){
+                width: 23%;
+                font-size: 1.3vw;
+                letter-spacing: -1px;
+                line-height: 2vw;
+            }
+        }
+
+        .button{
+            position: absolute;
+            left: calc(100% - 340px); 
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-color: #1C1D20;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-top: 130px;
+
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

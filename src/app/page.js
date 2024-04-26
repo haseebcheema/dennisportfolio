@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Landing from '../components/Landing';
 import Projects from '../components/Projects';
+import Description from '../components/Description';
 
 import React from 'react';
 
@@ -21,6 +22,7 @@ function page() {
   return (
     <main>
         <Landing />
+        <Description />
         <Projects />
     </main>
   )
