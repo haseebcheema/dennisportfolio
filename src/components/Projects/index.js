@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './style.module.scss';
 import Project from './components/Project';
+import Modal from './components/Modal';
 
 function index() {
 
@@ -8,22 +9,22 @@ function index() {
   const projectsLists = [
     {
       title: 'TWICE',
-      src: '../../../public/images/thumbnail-twice.jpg',
+      src: 'thumbnail-twice.jpg',
       type: 'Interaction & Development'
     },
     {
       title: 'The Damai',
-      src: '../../../public/images/thumbnail-thedamai-v2.jpg',
+      src: 'thumbnail-thedamai-v2.jpg',
       type: 'Design & Development'
     },
     {
       title: 'FABRIC™',
-      src: '../../../public/images/thumbnail-fabric-darkgray.jpg',
+      src: 'thumbnail-fabric-darkgray.jpg',
       type: 'Design & Development'
     },
     {
       title: 'Aaanstekelijk',
-      src: '../../../public/images/thumbnail-aanstekelijk.jpg',
+      src: 'thumbnail-aanstekelijk.jpg',
       type: 'Design & Development'
     }
   ]
@@ -41,6 +42,7 @@ function index() {
           })
         }
       </div>
+      <Modal modal={modal} projects={projectsLists}/>
     </main>
   )
 }
